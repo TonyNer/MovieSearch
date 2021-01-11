@@ -68,9 +68,14 @@ body {
     left: 0;
     right: 0;
     top: 10em;
-    
+    opacity: 40%;
 
 }
+
+.search-container:hover {
+    opacity: 70%;
+}
+
 
 .search {
     width: 30em;
@@ -81,6 +86,7 @@ body {
     outline: none;
     color: #9DBFAF;
     padding-top: 4px;
+    
 }
 
 .searchTerm:focus{
@@ -97,47 +103,40 @@ body {
     border-radius: 0 5px 5px 0;
     cursor: pointer;
     font-size: 18px;
-    
-    
-    
-    
-    
-    
+     
 }
 
 
 
+
 .navbar{
-    display: grid;
-    grid-area: toppen;
-    position: relative;
-    float: right;
-    
-    left: 210px;
+    display: block;
+    position: absolute;
+    top: 0.2em;
+    left: 50em;
 
 }
 
 .nav ul li {
     color: white;
-    display: inline-block;
-    position: relative;
-    float: right;
+    display: inline-flex;
+    
+    
     
     margin: 10px 20px ;
     a {
         color: white;
-        position: relative;
+        
     }
 }
 
 .nav ul li a:hover{
     color: rgb(127, 36, 187);
-    position: relative;
+    
 }
 
 .search-result-topp {
     display: grid;
-    grid-area: metten;
     background-color: rgb(172, 172, 172);
     
     
