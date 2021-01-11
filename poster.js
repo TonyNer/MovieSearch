@@ -34,7 +34,7 @@ async function getmovieid() {
             return `
             <p><img src="${user.url}" alt="" class="headerimg" ></p> 
             `
-            
+             
         })
         .join("");
 
