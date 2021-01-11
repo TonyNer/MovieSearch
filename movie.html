@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>MovieDB</title>
+    
+</head>
+<body>
+<style> body  {opacity:0;}</style>
+<div class="container">  
+    <div class="topsite">
+        <header>
+            <img src="./img/contemporary-websites-header-background.png" alt="Headerbackground" class="backgroundheader">
+        </header>
+        <header>
+            <div id="fanmadeheader">
+
+            </div>
+        </header>
+    </div>
+        <!-- Form -->
+    <div class="search-container">
+        <form method="get" id="search-form" class="search-form" >
+            <input type="text" name="query" class="search"><button action="index.html" type="submit" id="submit" class="searchButton">Search</button>
+        </form>
+    </div>
+    <!--<div class="navbar">
+        <nav class="nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+
+    </div>
+-->
+
+    <div id="present_result" class="search-result-topp">
+        <div class="results">
+            <div id="movieResult" >
+                <div class="user"></div>
+                
+            </div>
+        </div>
+    </div>
+    <p id="demo"></p>
+    <div class="search-result-topp">
+        <div class="results">
+            <div id="movieResult" >
+                <div class="user"></div>
+                
+            </div>
+        </div>
+    </div>
+    
+</div>  
+    
+    <script src="getMovie.js"></script>
+    <script src="SearchAgain.js"></script>
+    <script src="poster.js"></script>
+    <script>
+        window.onload = function() {setTimeout(function(){document.body.style.opacity="100";},500);};
+    </script>
+    
+</body>
+</html>
