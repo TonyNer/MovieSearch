@@ -40,6 +40,7 @@ body {
     display: block;
     height: 30em;
     display: absolute;
+    top: 0;
 
     
     
@@ -48,10 +49,10 @@ body {
 .backgroundheader {
     display: block;
     position: absolute;
-    width: 100%;
+    width: 100vw;
     left: 0;
     right: 0;
-    margin-bottom: 200em;
+    
     
     
 }
