@@ -109,28 +109,32 @@ body {
 
 
 
-.navbar{
-    display: block;
+.navbar {
     position: absolute;
     top: 1em;
-    left: 50em;
-
+    width: 100vw;
+    
 }
 
-.nav ul li {
+.nav ul {
+    float: right;
+}
+
+
+.nav li {
     color: white;
+    padding: 10px 20px ;
     display: inline-flex;
     
-    
-    
-    margin: 10px 20px ;
-    a {
-        color: white;
-        
-    }
 }
 
-.nav ul li a:hover{
+.nav a {
+    color: white;  
+     
+    
+}
+
+.nav a:hover{
     color: rgb(127, 36, 187);
     
 }
