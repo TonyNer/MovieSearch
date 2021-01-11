@@ -23,7 +23,7 @@ async function getmovieid() {
     });
     var imdbstring = JSON.stringify(imdb).replace(/[n" "n [ \] \\]+/g, '');
     
-    let response2 = await fetch(`http://webservice.fanart.tv/v3/movies/${imdbstring}?api_key=${apikey}`);
+    let response2 = await fetch(`https://webservice.fanart.tv/v3/movies/${imdbstring}?api_key=${apikey}`);
         let jsonimdb = await response2.json(); 
         console.log(jsonimdb);
         
