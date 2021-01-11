@@ -1,5 +1,5 @@
 
-var url = 'http://webservice.fanart.tv/v3/movies/${id}?api_key=${apikey}';
+var url = 'https://webservice.fanart.tv/v3/movies/${id}?api_key=${apikey}';
 
 var urlimdb = 'https://api.themoviedb.org/3/movie/{movie_id}/external_ids?api_key=e8a86a0bf7377e6a4ddf1a694a31a1ba';
 var apikey = 'c053b462978d79ed0f34a7dc891d3734';
