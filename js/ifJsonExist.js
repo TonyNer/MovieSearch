@@ -4,11 +4,11 @@ console.log(json);
 
 const html = json.results.map(function(user) {
     return `
-        <div class="searchresult">
-        <p><a href="movie.html" id="${user.id}" onClick="reply_click(this.id)"><img src="${linkimg+user.backdrop_path}" alt="" class="resultimg" ></a></p> 
-        <div class="title"><a href="movie.html" id="${user.id}" onClick="reply_click(this.id)"><p>${user.title}</p></a></div>
-        <div class="overview"><p>${user.overview}</p></div>
-        </div>
+    <div class="searchresult">
+            <p><a href="movie.html" id="${user.id}" onClick="reply_click(this.id)"><img src="${linkimg+user.backdrop_path}" alt="" class="resultimg" ></a></p> 
+            <div class="title"><a href="movie.html" id="${user.id}" onClick="reply_click(this.id)"><p>${user.title}</p></a></div>
+            <div class="overview"><p>${user.overview}</p></div>
+            </div>
         `
 
 

@@ -32,7 +32,7 @@ async function getmovieid() {
 
         const html = jsonimdb.moviebackground.slice(0, 1).map(user => {
             return `
-            <p><img src="${user.url}" alt="" class="headerimg" ></p> 
+            <p><img src="${user.url}" alt="" class="headerimg" onload="Redirect()"></p> 
             `
             
         })

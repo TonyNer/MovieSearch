@@ -25,16 +25,12 @@ async function search(event) {
         const html = json.results.map(user => {
             return `
             
-            <div class="searchresult">
+            <div class="searchresult" id="title">
             <p><a href="movie.html" id="${user.id}" onClick="reply_click(this.id)"><img src="${linkimg+user.backdrop_path}" alt="" class="resultimg" ></a></p> 
             <div class="title"><a href="movie.html" id="${user.id}" onClick="reply_click(this.id)"><p>${user.title}</p></a></div>
             <div class="overview"><p>${user.overview}</p></div>
             </div>
             `
-            
-        ;
-        
-            
         })
         .join("");
 
@@ -45,8 +41,17 @@ async function search(event) {
 
 
         
-    }
+    };
 
+    /* Smooth scroll to first movie after search */
+    function onSearchScroll() {
+        document.getElementById( 'title' ).scrollIntoView({
+            behavior: 'smooth'});
+        window.setTimeout( function () { top(); }, 2000 );
+
+    };
+    
+    onSearchScroll();
     
             
 }

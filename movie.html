@@ -3,72 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./css/stylesheets.css"> 
+
+        
     <title>MovieDB</title>
     
 </head>
 <body>
-<style> body  {opacity:0;}</style>
-<div class="container">  
-    <div class="topsite">
-        <header>
-            <img class="imageheader" src="./img/contemporary-websites-header-background.png" alt="Headerbackground" class="backgroundheader">
-        </header>
-        <header>
-            <div id="fanmadeheader">
 
-            </div>
-        </header>
-    </div>
-        <!-- Form -->
-    <div class="search-container">
-        <form method="get" id="search-form" class="search-form" >
-            <input type="text" name="query" class="search"><button action="index.html" type="submit" id="submit" class="searchButton">Search</button>
-        </form>
-    </div>
-    <div class="navbar">
-        <div class="nav">
+    <div class="container">
+            
+            <!-- HeaderBackground -->
+        <!-- If JS can't fetch img from API -->
+        <div class="topsite">
+        <div class="headerbackground"></div>
+
+
+        <div id="fanmadeheader"></div>
+
+        <!--  NavBar section  -->
+
+        <div class="navBar">
             <ul>
                 <li>
-                    <a href="index.html">Home</a>
+                    <a href="#">Contact</a>
                 </li> 
                 <li> 
                     <a href="#">About</a>
                 </li> 
                 <li>
-                    <a href="#">Contact</a>
+                    <a onClick="reset_click(this.id)" href="index.html">Home</a>
                 </li>
-            </ul>   
+            </ul>
         </div>
-    </div>
 
 
-    <div id="present_result" class="search-result-topp">
-        <div class="results">
-            <div id="movieResult" >
-                <div class="user"></div>
-                
+            <!-- SearchBar And SearchButton -->
+            <div id="searchBar" class="search-container">
+                <form method="get" id="search-form" class="search-form">
+                    <input type="text" name="query" class="search"><button type="submit" id="submit" class="searchButton">Search</button>
+                </form>
             </div>
-        </div>
-    </div>
-    <p id="demo"></p>
-    <div class="search-result-topp">
-        <div class="results">
-            <div id="movieResult" >
-                <div class="user"></div>
-                
             </div>
-        </div>
+
+            <!-- Results Of The MovieSearch -->
+            <div class="searchresults">
+                <div id="present_result" class="search-result-topp">
+                    <div class="results">
+                        <div id="movieResult" ></div>
+                        <div class="user"></div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <button class="open-button" onclick="openForm()">Contact Me</button>
+
+            <div class="form-popup" id="myForm">
+              <form action="" class="form-container">
+                <h1>Contact</h1>
+            
+                <label for="email"><b>Email</b></label>
+                <input type="text" class="email" placeholder="Enter Email" name="email" required>
+            
+                <label for="text"><b>Text</b></label>
+                <textarea id="text" name="text" class="text" rows="4" cols="50" placeholder="Enter Text"></textarea>
+            
+                <button type="submit" class="btn">Login</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+              </form>
+            </div>
+
+            <!-- Div to put loader fullscreen with animation -->
+            <div id="loader" class="onloading"><div></div><div></div></div>
     </div>
-    
-</div>  
-    
     <script src="./js/getMovie.js"></script>
     <script src="./js/SearchAgain.js"></script>
     <script src="./js/poster.js"></script>
-    <script>
-        window.onload = function() {setTimeout(function(){document.body.style.opacity="100";},500);};
-    </script>
+    <script src="./js/reset-homebutton.js"></script>
+    <script src="./js/fadeSearchBar.js"></script>
+    <script src="./js/aboutPopup.js"></script>
+    <script src="./js/PageLoader.js"></script>
     
 </body>
 </html>
