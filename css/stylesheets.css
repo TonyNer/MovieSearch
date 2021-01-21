@@ -267,6 +267,17 @@ html {
   font-size: 18px;
 }
 
+.tiles {
+  background-color: #056677;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: results;
+  width: 100%;
+  z-index: 1;
+}
+
 .searchresults {
   display: -ms-grid;
   display: grid;
@@ -275,7 +286,6 @@ html {
   grid-area: results;
   width: 100%;
   z-index: 1;
-  background-color: #056677;
 }
 
 .searchresult {
@@ -283,29 +293,67 @@ html {
   text-align: left;
   display: inline-block;
   position: relative;
+  background-color: white;
+  margin-bottom: 20px;
+  -webkit-box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 281px;
 }
 
 .resultimg {
   display: block;
   width: 500px;
-  height: 321px;
-  margin-top: 2em;
-  margin-bottom: 2em;
+  height: auto;
   margin-left: auto;
   margin-right: auto;
-  -webkit-box-shadow: 3px 3px #696767;
-          box-shadow: 3px 3px #696767;
+  border-radius: 10px 0 0 10px;
+}
+
+.text-tile {
+  width: 100%;
+}
+
+.text-tile .text-tile-link {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 .title {
-  display: block;
   font-size: 20px;
   font-weight: bold;
   padding-bottom: 1em;
+  max-height: 100px;
+  width: 100%;
+  margin: 150px 0 0 30px;
+}
+
+.title p {
+  float: left;
 }
 
 .overview {
   padding-bottom: 1em;
+}
+
+.vote {
+  position: relative;
+  width: 100%;
+  max-height: 50px;
+  right: 0;
+}
+
+.vote p {
+  float: right;
+  margin: 10px 10px;
 }
 
 /* This is pop-up fomr */
