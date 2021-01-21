@@ -24,11 +24,11 @@ async function search(event) {
         console.log(json);
         const html = json.results.map(user => {
             return `
-            
-            <div class="searchresult" id="title">
+            <div id="title"></div>
+            <div class="searchresult">
             <p><a href="movie.html" id="${user.id}" onClick="reply_click(this.id)"><img src="${linkimg+user.backdrop_path}" alt="No image for this movie" class="resultimg" ></a></p>
             <div class="text-tile" >
-            <div class="vote"><p><i class="far fa-star"></i>${user.vote_average}/10</p></div>
+            <div class="vote"><p><i class="far fa-star"></i>${user.vote_average} / 10</p></div>
             <div class="title"><a href="movie.html" id="${user.id}" onClick="reply_click(this.id)"><p>${user.title}</p></a></div>
             <a href="movie.html" id="${user.id}" class="text-tile-link" onClick="reply_click(this.id)"></div>
             </div>
