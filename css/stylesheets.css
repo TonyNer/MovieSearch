@@ -293,7 +293,9 @@ html {
 .searchresult {
   top: 7em;
   text-align: left;
-  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
   background-image: -webkit-gradient(linear, left top, right top, from(#034f49), color-stop(30%, #096479), to(#00d4ff));
   background-image: linear-gradient(90deg, #034f49 0%, #096479 30%, #00d4ff 100%);
@@ -301,9 +303,6 @@ html {
   -webkit-box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
           box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   min-height: 281px;
 }
 
@@ -319,6 +318,7 @@ html {
 
 .text-tile {
   width: 100%;
+  float: left;
 }
 
 .text-tile .text-tile-link {
@@ -332,11 +332,11 @@ html {
 }
 
 .title {
+  display: inline-block;
   font-size: 30px;
   font-weight: 600;
   padding-bottom: 1em;
-  max-height: 100px;
-  width: 100%;
+  top: 30px;
   margin: 50px 0 0 30px;
 }
 
@@ -344,8 +344,40 @@ html {
   float: left;
 }
 
-.overview {
+.tagline {
+  display: inline-block;
+  position: relative;
+  max-width: 700px;
+  font-size: 20px;
+  font-weight: 400;
+  font-style: italic;
   padding-bottom: 1em;
+  top: 0px;
+  margin: 50px 0 0 30px;
+}
+
+.overview {
+  display: block;
+  position: relative;
+  font-size: 18px;
+  font-weight: 300;
+  padding-bottom: 1em;
+  margin: 50px 0 0 30px;
+  top: -30px;
+  float: left;
+}
+
+.release-date {
+  position: relative;
+  font-size: 18px;
+  font-weight: 300;
+  margin: 0 0 20px 30px;
+  float: left;
+}
+
+.release-date p {
+  height: 30px;
+  bottom: 0px;
 }
 
 .vote {
@@ -361,6 +393,25 @@ html {
 }
 
 .vote i {
+  color: gold;
+  margin-right: 5px;
+  margin-bottom: 5px;
+}
+
+.vote-result {
+  display: block;
+  position: relative;
+  float: right;
+  margin: 45px 10px 0 30px;
+  top: 0;
+}
+
+.vote-result p {
+  float: right;
+  margin: 10px 10px;
+}
+
+.vote-result i {
   color: gold;
   margin-right: 5px;
   margin-bottom: 5px;

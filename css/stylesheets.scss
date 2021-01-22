@@ -217,7 +217,6 @@ object-fit: cover;
     font-size: 18px;
 }
 
-
 #title {
   margin-top: 50px;
 }
@@ -244,14 +243,14 @@ object-fit: cover;
 .searchresult {
     top: 7em;
     text-align: left;
-    display: inline-block;
+    display: flex;
     position: relative;
     background-image: linear-gradient(90deg, rgba(3,79,73,1) 0%, rgba(9,100,121,1) 30%, rgba(0,212,255,1) 100%);
     margin-bottom: 20px;
     box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    display: flex;
     min-height: 281px;
+    
     }
 
     .resultimg {
@@ -266,6 +265,7 @@ object-fit: cover;
     
     .text-tile {
       width: 100%;
+      float: left;
       
         .text-tile-link {
           position: absolute;
@@ -279,21 +279,55 @@ object-fit: cover;
     }
 
     .title {
-        
-        font-size: 30px;
-        font-weight: 600;
-        padding-bottom: 1em;
-        max-height: 100px;
-        width: 100%;
-        margin: 50px 0 0 30px;
-          p {
-            float: left;
-          }
+      display: inline-block;
+    font-size: 30px;
+    font-weight: 600;
+    padding-bottom: 1em;
+    top: 30px;
+    margin: 50px 0 0 30px;
+      p {
+        float: left;
+      }
+}
+
+    .tagline {
+      display: inline-block;
+      position: relative;
+      max-width: 700px;
+      font-size: 20px;
+      font-weight: 400;
+      font-style: italic;
+      padding-bottom: 1em;
+      top: 0px;
+      margin: 50px 0 0 30px;
+      
     }
 
     .overview {
-        padding-bottom: 1em;
-    }
+    display: block;
+    position: relative;
+    font-size: 18px;
+    font-weight: 300;
+    padding-bottom: 1em;
+    margin: 50px 0 0 30px;
+    top: -30px;
+    float: left;
+
+}
+
+.release-date {
+      
+      position: relative;
+      
+      font-size: 18px;
+      font-weight: 300;
+      margin: 0 0 20px 30px;
+      float: left;
+      p {
+        height: 30px;
+        bottom: 0px;
+      }
+}
 
     .vote {
       position: relative;
@@ -310,7 +344,25 @@ object-fit: cover;
           margin-bottom: 5px;
         }
     }
-
+    
+    .vote-result {
+      display: block;
+      position: relative;
+      float: right;
+      margin: 45px 10px 0 30px;
+      top: 0;
+        p {
+          float: right;
+          margin: 10px 10px;
+        }
+        i {
+          color: gold;
+          margin-right: 5px;
+          margin-bottom: 5px;
+        }
+    }
+    
+    
 
 
 

@@ -15,10 +15,10 @@ async function search(event) {
     event.preventDefault();
     document.getElementById("present_result").innerHTML = "";
     if(this.elements.query.value === '') {
-        alert("Enter search word!");
+        alert("Enter Movie Name!");
     } else {
-        var rawInputData = this.elements.query.value;
-        let response = await fetch(api+apiKey+rawInputData+units);
+        var MovieSearch = this.elements.query.value;
+        let response = await fetch(api+apiKey+MovieSearch+units);
         let json = await response.json();
         
         console.log(json);

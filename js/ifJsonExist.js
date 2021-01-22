@@ -1,3 +1,6 @@
+
+/* This script sends movie search from movie result page and sends it to the movie search page */
+
 var save = sessionStorage.getItem('searchagain');
 var json = JSON.parse(save)
 console.log(json);

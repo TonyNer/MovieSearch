@@ -1,3 +1,6 @@
+
+/* Just to reset the sessionStorage */
+
 function reset_click(clicked_id)
 {
     

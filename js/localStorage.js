@@ -1,5 +1,5 @@
 
-
+/* This script load the stored array when re-searching from movie-result page */ 
 
 function reply_click(clicked_id)
 {

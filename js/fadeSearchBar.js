@@ -1,3 +1,6 @@
+
+/* Script that fade the searchBar when scrolling down */
+
 var searchBar = document.getElementById("searchBar")
 
 window.addEventListener('scroll', function() {

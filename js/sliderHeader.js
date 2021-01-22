@@ -1,3 +1,8 @@
+
+
+/* This script takes the top 3 popular movies atm and display it on the header */
+
+
 var url = 'https://webservice.fanart.tv/v3/movies/${id}?api_key=${apikey}';
 
 var urlimdb = 'https://api.themoviedb.org/3/movie/{movie_id}/external_ids?api_key=e8a86a0bf7377e6a4ddf1a694a31a1ba';
@@ -100,48 +105,48 @@ async function getmovieid() {
 
 
          /* Third moviebackground */
-         var Background3 = document.getElementsByClassName('slider3')[0].innerText;
-         console.log(Background2);
-         
-         let response3 = await fetch(`https://webservice.fanart.tv/v3/movies/${Background3}?api_key=${apikey}`);
-         let jsonimdb3 = await response3.json(); 
-         console.log(jsonimdb3);
-         
-         var third = jsonimdb3.moviebackground;
-         console.log(third);
- 
-         const showslider3 = jsonimdb3.moviebackground.slice(0, 1).map(user => {
-             return `
-             <p><img src="${user.url}" alt="" class="headerimg"  onload="Redirect()" id="fadeElement"></p>
-             `
-             
-         })
-         .join("");
-         
-         const showPage3 = '#fanmadeheader';
-         document.querySelector(showPage3).insertAdjacentHTML("afterbegin", showslider3);
+        var Background3 = document.getElementsByClassName('slider3')[0].innerText;
+        console.log(Background2);
+        
+        let response3 = await fetch(`https://webservice.fanart.tv/v3/movies/${Background3}?api_key=${apikey}`);
+        let jsonimdb3 = await response3.json(); 
+        console.log(jsonimdb3);
+        
+        var third = jsonimdb3.moviebackground;
+        console.log(third);
+
+        const showslider3 = jsonimdb3.moviebackground.slice(0, 1).map(user => {
+            return `
+            <p><img src="${user.url}" alt="" class="headerimg"  onload="Redirect()" id="fadeElement"></p>
+            `
+        
+        })
+        .join("");
+        
+        const showPage3 = '#fanmadeheader';
+        document.querySelector(showPage3).insertAdjacentHTML("afterbegin", showslider3);
 
 
 
          /* Slideshow function */
 
-         var slideIndex = 0;
-         showSlides();
+        var slideIndex = 0;
+        showSlides();
 
-         function showSlides() {
-             var i;
-             var slides = document.getElementsByClassName("headerimg");
-             for (i = 0; i < slides.length; i++) {
-                 slides[i].style.display ="none";
-             }
+        function showSlides() {
+            var i;
+            var slides = document.getElementsByClassName("headerimg");
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display ="none";
+            }
             slideIndex++;
             if (slideIndex > slides.length) {slideIndex = 1}
 
-             slides[slideIndex-1].style.display ="block";
-             setTimeout(showSlides, 5000);
+            slides[slideIndex-1].style.display ="block";
+            setTimeout(showSlides, 5000);
             
-         }
-         
+        }
+
 }
         
     
