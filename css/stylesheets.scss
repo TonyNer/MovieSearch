@@ -1,0 +1,489 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+    color: rgb(36, 35, 35);
+    vertical-align: middle;
+    max-width: 1140px;
+    
+}
+
+
+
+
+html {
+    font-family: 'Montserrat'; 
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(5, 102, 119);
+    
+}
+
+
+.onloading {
+  display: inline-block;
+  position: absolute;
+  width: 50px;
+  height: 0px;
+  
+  
+}
+.onloading div {
+  max-width: 100vh;
+  height: 100%;
+  position: absolute;
+  border: 4px solid #fff;
+  top:0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  opacity: 1;
+  border-radius: 50%;
+  animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+}
+.onloading div:nth-child(2) {
+  animation-delay: -0.5s;
+}
+@keyframes lds-ripple {
+  0% {
+    top: 0px;
+    left: 0px;
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+  100% {
+    top: 0px;
+    left: 0px;
+    width: 72px;
+    height: 72px;
+    opacity: 0;
+  }
+}
+
+
+#loader { 
+position: absolute;
+max-width: 100%;
+width: 100%;
+height: 100vh;
+top: 0;
+left: 0;
+background-color: rgb(5, 102, 119);
+z-index: 999;
+object-fit: cover;
+
+} 
+
+
+
+.container {
+    margin: 0 auto;
+    display: grid;
+    list-style-type: none;
+    grid-template-columns: auto;
+    grid-template-rows: 500px auto 100px;
+    grid-template-areas: 
+    "header-search-nav"
+    "results"
+    "footer"
+    ;
+    
+    
+}
+
+
+
+.topsite {
+    display: grid;
+    grid-area: header-search-nav;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    grid-template-columns: repeat(2, 50% 50%);
+    grid-template-rows:repeat(4, auto);
+}
+
+.headerbackground {
+    display: grid;
+    grid-column: 1 / 3;
+    grid-row: 1 / 5;
+    background-image: url(../img/contemporary-websites-header-background.png);
+}
+
+#fanmadeheader {
+    display: grid;
+    grid-column: 1 / 3;
+    grid-row: 1 / 5;
+    position: fixed;
+    object-fit: cover;
+    height: 500px;
+    background-color: black;
+}
+
+#sliderid {
+    opacity: 0;
+    
+}
+
+#fadeElement {
+    animation: fadeinout 5s linear 1 forwards;
+    width: 100%;
+    height: 500px;
+}
+
+
+
+@keyframes fadeinout {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.headerimg {
+    display: grid;
+    grid-area: header-search-nav;
+    position: relative;
+    object-fit: cover;
+    object-position: 100% 0;
+    width: 200%;
+    height: 500px;
+}
+
+.navBar {
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    display: grid;
+    height: 40px;
+    justify-items: flex-end;
+    z-index: 1;
+}
+
+.navBar ul li {
+    display: inline-block;
+    margin: 10px;
+}
+
+.search-container {
+    grid-area: header-search-nav;
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+    z-index: 1;
+    text-align:center;
+    top: -400px;
+    
+}
+
+
+.search-form {
+  opacity: 30%;
+}
+
+
+.search-form:hover {
+    opacity: 100%;
+    
+}
+
+
+.search {
+    width: 30em;
+    border: 2px solid rgb(135, 191, 255);
+    border-right: none;
+    height: 34px;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    color: #9DBFAF;
+    padding-top: 2px;
+    
+}
+
+
+.searchButton {
+    width: 80px;
+    height: 34px;
+    border: 2px solid rgb(135, 191, 255);
+    background: rgb(135, 191, 255);
+    text-align: center;
+    color: rgb(240, 241, 231);
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+#title {
+  margin-top: 50px;
+}
+
+
+
+.tiles {
+  background-color: rgb(5, 102, 119);
+  display: grid;
+    grid-area: results;
+    width: 100%;
+    z-index: 1;
+    
+}
+
+.searchresults {
+    display: grid;
+    grid-area: results;
+    width: 100%;
+    z-index: 1;
+    
+}
+
+.searchresult {
+    top: 7em;
+    text-align: left;
+    display: flex;
+    position: relative;
+    background-image: linear-gradient(90deg, rgba(3,79,73,1) 0%, rgba(9,100,121,1) 30%, rgba(0,212,255,1) 100%);
+    margin-bottom: 20px;
+    box-shadow: 0 20px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    min-height: 281px;
+    
+    }
+
+    .resultimg {
+        display: block;
+        width: 500px;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 10px 0 0 10px;
+        background-color: #4CAF50;
+    }
+    
+    .text-tile {
+      width: 100%;
+      float: left;
+      
+        .text-tile-link {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+    }
+
+    .title {
+      display: inline-block;
+    font-size: 30px;
+    font-weight: 600;
+    padding-bottom: 1em;
+    top: 30px;
+    margin: 50px 0 0 30px;
+      p {
+        float: left;
+      }
+}
+
+    .tagline {
+      display: inline-block;
+      position: relative;
+      max-width: 700px;
+      font-size: 20px;
+      font-weight: 400;
+      font-style: italic;
+      padding-bottom: 1em;
+      top: 0px;
+      margin: 50px 0 0 30px;
+      
+    }
+
+    .overview {
+    display: block;
+    position: relative;
+    font-size: 18px;
+    font-weight: 300;
+    padding-bottom: 1em;
+    margin: 50px 0 0 30px;
+    top: -30px;
+    float: left;
+
+}
+
+.release-date {
+      
+      position: relative;
+      
+      font-size: 18px;
+      font-weight: 300;
+      margin: 0 0 20px 30px;
+      float: left;
+      p {
+        height: 30px;
+        bottom: 0px;
+      }
+}
+
+    .vote {
+      position: relative;
+      width: 100%;
+      max-height: 50px;
+      right: 0;
+        p {
+          float: right;
+          margin: 10px 10px;
+        }
+        i {
+          color: gold;
+          margin-right: 5px;
+          margin-bottom: 5px;
+        }
+    }
+    
+    .vote-result {
+      display: block;
+      position: relative;
+      float: right;
+      margin: 45px 10px 0 30px;
+      top: 0;
+        p {
+          float: right;
+          margin: 10px 10px;
+        }
+        i {
+          color: gold;
+          margin-right: 5px;
+          margin-bottom: 5px;
+        }
+    }
+    
+    
+
+
+
+   
+
+
+/* This is pop-up fomr */
+.open-button {
+    background-color: rgb(179, 27, 27);
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    opacity: 0.6;
+    position: fixed;
+    bottom: -15px;
+    left: -15px;
+    width: 80px;
+    height: 80px;
+    z-index: 4;
+    border-radius: 50%;
+  }
+
+.open-button:active {
+    opacity: 0;
+    transition: all 1s ease-in;
+    background-color: red;
+}
+  
+  /* The popup form - hidden by default */
+  .form-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 15px;
+    z-index: 9;
+    ;
+
+
+
+
+
+
+  
+  /* Add styles to the form container */
+  .form-container {
+    
+    padding: 10px;
+    width: 800px;
+    height: 800px;
+    border-radius: 50%;
+    position: relative;
+    top: 600px;
+    right: 550px;
+    transition: width 0.5s, height 0.5s;
+    transition-timing-function: cubic-bezier( 0.2);
+
+  }
+
+.form-container:hover  {
+    background-color: rgba(202, 11, 27, 0.349);
+    width: 1200px;
+    height: 1200px;
+    ;
+}
+
+  
+  /* Full-width input fields */
+  .form-container .email {
+    position: relative;
+    width: 300px;
+    border: none;
+    background: #f1f1f1;
+    top: 250px;
+    left: 495px;
+  }
+  .form-container .text {
+    position: relative;
+    width: 300px;
+    height: 200px;
+    border: none;
+    background: #f1f1f1;
+    top: 100px;
+    left: 140px;
+  }
+  
+  /* When the inputs get focus, do something */
+  .form-container .text:focus, .form-container .email:focus {
+    background-color: rgb(172, 172, 172);
+    outline: none;
+    
+  }
+  
+  /* Set a style for the submit/login button */
+  .form-container .btn {
+    position: relative;
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100px;
+    margin-bottom:10px;
+    opacity: 0.8;
+    top: 300px;
+    left: -165px;
+  }
+  
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+    left: -70px;
+    top: 300px;
+  }
+  
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover {
+    opacity: 1;
+  }
+
+
+
+
+}
