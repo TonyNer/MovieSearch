@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/6490443ef2.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="./css/stylesheets.css"> 
+
+        
+    <title>MovieDB</title>
+    
+</head>
+<body>
+
+    <div class="container">
+            
+            <!-- HeaderBackground -->
+        <!-- If JS can't fetch img from API -->
+        <div class="topsite">
+        <div class="headerbackground"></div>
+
+
+        <div id="fanmadeheader"></div>
+
+        <!--  NavBar section  -->
+
+        <div class="navBar">
+            <ul>
+                <li>
+                    <a href="#">Contact</a>
+                </li> 
+                <li> 
+                    <a href="#">About</a>
+                </li> 
+                <li>
+                    <a onClick="reset_click(this.id)" href="index.html">Home</a>
+                </li>
+            </ul>
+        </div>
+
+
+            <!-- SearchBar And SearchButton -->
+            <div id="searchBar" class="search-container">
+                <form method="get" id="search-form" class="search-form">
+                    <input type="text" name="query" class="search"><button type="submit" id="submit" class="searchButton">Search</button>
+                </form>
+            </div>
+            </div>
+
+            <!-- Results Of The MovieSearch -->
+            <div class="searchresults">
+                <div id="present_result" class="search-result-topp">
+                    <div class="results">
+                        <div id="movieResult" ></div>
+                        <div class="user"></div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <button class="open-button" onclick="openForm()">Contact Me</button>
+
+            <div class="form-popup" id="myForm">
+              <form action="" class="form-container">
+                <h1>Contact</h1>
+            
+                <label for="email"><b>Email</b></label>
+                <input type="text" class="email" placeholder="Enter Email" name="email" required>
+            
+                <label for="text"><b>Text</b></label>
+                <textarea id="text" name="text" class="text" rows="4" cols="50" placeholder="Enter Text"></textarea>
+            
+                <button type="submit" class="btn">Login</button>
+                <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+              </form>
+            </div>
+
+            <!-- Div to put loader fullscreen with animation -->
+            <div id="loader" class="onloading"><div></div><div></div></div>
+    </div>
+    <script src="./js/getMovie.js"></script>
+    <script src="./js/SearchAgain.js"></script>
+    <script src="./js/poster.js"></script>
+    <script src="./js/reset-homebutton.js"></script>
+    <script src="./js/fadeSearchBar.js"></script>
+    <script src="./js/aboutPopup.js"></script>
+    <script src="./js/PageLoader.js"></script>
+    
+</body>
+</html>
